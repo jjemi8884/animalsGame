@@ -8,7 +8,8 @@ public class Rabbit extends Animals {
 	
 	public Rabbit(Point p, Graphics g) {
 		super("Rabbit", p, 45, 180, 0, g);
-		this.size = 10;
+		this.size = 1;
+		this.draw();
 	}
 	public void draw() {
 		Point p = super.getLocation();
@@ -17,9 +18,12 @@ public class Rabbit extends Animals {
 		g.fillRect(p.x, p.y, size, size);
 	}
 	public void move() {
-		super.move(0, 1);
-		super.move(1, 0);
-		super.move(0, -1);
+		super.move("north", 2);
+		this.draw();
+		super.move("east", 2);
+		this.draw();
+		super.move("south", 2);
+		this.draw();
 	}
 	public String toString() {
 		return "R";

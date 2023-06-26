@@ -17,13 +17,19 @@ public class AnimalsMain {
 	Bird b = new Bird(new Point(rand.nextInt(size), rand.nextInt(size)), g);
 	Frog f = new Frog(new Point(rand.nextInt(size), rand.nextInt(size)), g);
 	Mouse m = new Mouse(new Point(rand.nextInt(size), rand.nextInt(size)), g);
-	for(int i = 0; i < 10; i++) {
+	Rabbit r = new Rabbit(new Point(rand.nextInt(size), rand.nextInt(size)), g);
+	Snake s = new Snake(new Point(rand.nextInt(size), rand.nextInt(size)), g);
+	Turtle t = new Turtle(new Point(rand.nextInt(size), rand.nextInt(size)), g);
+	for(int i = 0; i < 100; i++) {
 		b.move();
-		b.draw();
 		f.move();
-		f.draw();
 		m.move();
-		m.draw();
+		r.move();
+		s.move();
+		t.move();
+		
+		
+		
 	}
 	 
 	}

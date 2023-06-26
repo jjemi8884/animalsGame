@@ -8,8 +8,8 @@ public class Frog extends RandomAnimals {
 	
 	public Frog(Point p, Graphics g) {
 		super("Frog", p, 120, 45, 7, g);
-		this.steps= 3;
-		this.size = 20;
+		this.steps = 1;
+		this.size = 1;
 		
 		
 	}
@@ -22,7 +22,12 @@ public class Frog extends RandomAnimals {
 		
 	}
 	public void move() {
-		super.move(this.steps);
+		super.move(1);
+		this.draw();
+		super.move(1);
+		super.draw();
+		super.move(1);
+		super.draw();
 	}
 	public String toString() {
 		return "F";

@@ -3,15 +3,14 @@ import java.awt.* ;
 
 public class Bird extends RandomAnimals{
 	// the class for birds
-	private int size;
 	private int steps;
-	
+	private int size;
 	
 	
 	
 	public Bird (Point p, Graphics g) {
 		super("Bird",p, 7, 66, 120, g);
-		this.size = 20;
+		this.size = 1;
 		this.steps = 1;
 		
 		// set the location of the bird
@@ -27,6 +26,7 @@ public class Bird extends RandomAnimals{
 	}
 	public void move() {
 		super.move(this.steps);
+		this.draw();
 		
 	}
 	public String toString() {

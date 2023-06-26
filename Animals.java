@@ -17,13 +17,23 @@ public class Animals {
 		
 	}
 	
-	public void move(int xDelta, int yDelta) {
+	public void move(String direction, int steps) {
 		// move in the x and y locations
 		int x = p.x;
 		int y = p.y;
-		x += xDelta;
-		y += yDelta;
+		if (direction.equals("north")) {
+			y -= steps;
+		}else if (direction.equals("south")) {
+			y += steps; 
+		}else if (direction.equals("east")) {
+			x += steps;
+		}else if (direction.equals("west")) {
+			x -= steps;
+		}else {
+			System.out.println("Move for " + this.name + " is messed up");
+		}
 		this.p.setLocation(x,y);
+		
 		
 	}
 	public void draw(Graphics g) {

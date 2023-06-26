@@ -32,6 +32,7 @@ public abstract class RandomAnimals extends Animals {
 		p.setLocation(x , y);
 		p = super.correctPoint(p);
 		super.setLocation(p);
+		this.draw();
 	}
 	public void draw() {
 		// another abstract class for subclasses to create
